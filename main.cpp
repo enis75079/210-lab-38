@@ -41,7 +41,20 @@ int main() {
                 cout << "Record not found." << endl;
             }
         } else if (userChoice == 4) {
-            
+            string old;
+            string neww;
+            cout << "Record to modify: ";
+            cin >> old;
+            if (tree.searchNode(old)) {
+                cout << "New value: ";
+                cin >> neww;
+
+                tree.remove(old);
+                tree.insertNode(neww);
+                cout << "Record has been modified" << endl;
+            } else {
+                cout << "record not found." << endl;
+            }
         } else if (userChoice == 5) {
             cout << "Program terminated." << endl;
         } else {
