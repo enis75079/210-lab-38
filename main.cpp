@@ -34,7 +34,18 @@ int main() {
             tree.remove(userInput);
         } else if (userChoice == 3) {
             cout << "Record to search: ";
-            cin  
+            cin >> userChoice;
+            if (tree.searchNode(userInput)) {
+                cout << "Record found." << endl;
+            } else {
+                cout << "Record not found." << endl;
+            }
+        } else if (userChoice == 4) {
+            
+        } else if (userChoice == 5) {
+            cout << "Program terminated." << endl;
+        } else {
+            cout << "Invalid choice. Please try again." << endl;
         }
     }
 
