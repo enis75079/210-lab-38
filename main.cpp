@@ -34,7 +34,7 @@ int main() {
             tree.remove(userInput);
         } else if (userChoice == 3) {
             cout << "Record to search: ";
-            cin >> userChoice;
+            cin >> userInput;
             if (tree.searchNode(userInput)) {
                 cout << "Record found." << endl;
             } else {
@@ -48,7 +48,6 @@ int main() {
             if (tree.searchNode(old)) {
                 cout << "New value: ";
                 cin >> neww;
-
                 tree.remove(old);
                 tree.insertNode(neww);
                 cout << "Record has been modified" << endl;
